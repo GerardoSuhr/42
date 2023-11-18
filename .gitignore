@@ -1,0 +1,4 @@
+# .out files
+*.out
+# makefile (for different compilation rules)
+makefile
