@@ -6,11 +6,11 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:17:06 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/17 18:54:22 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/19 16:56:45 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace1(char c)
+int	ft_isspace(char c)
 {
 	int	r;
 
@@ -20,7 +20,7 @@ int	ft_isspace1(char c)
 	return (r);
 }
 
-int	ft_sign1(char c)
+int	ft_sign(char c)
 {
 	int	r;
 
@@ -29,16 +29,6 @@ int	ft_sign1(char c)
 		r = 1;
 	else if (c == '-')
 		r = -1;
-	return (r);
-}
-
-int	ft_isdigit1(char a)
-{
-	int	r;
-
-	r = 0;
-	if ((a >= '0' && a <= '9'))
-		r = 2048;
 	return (r);
 }
 
@@ -55,11 +45,11 @@ int	ft_atoi(char *str)
 	s = 0;
 	while (*str)
 	{
-		if (ft_isspace1(*str) == 1 && m == 0 && d == 0)
+		if (ft_isspace(*str) == 1 && m == 0 && d == 0)
 			s++;
-		else if (ft_sign1(*str) != 0 && m == 0 && d == 0)
-			m = ft_sign1(*str);
-		else if (ft_isdigit1(*str) == 2048)
+		else if (ft_sign(*str) != 0 && m == 0 && d == 0)
+			m = ft_sign(*str);
+		else if (ft_isdigit(*str) == 2048)
 		{
 			r = r * 10 + *str - '0';
 			d++;

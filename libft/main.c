@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:41:54 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/17 19:01:27 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/19 17:05:07 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 
 	//To test ft_isalpha
 	printf("\n");
-	printf("------------------Testing ft_isalpha()------------------ \n");
+	printf("1------------------Testing ft_isalpha()------------------ \n");
 	aa = isalpha('a');
 	bb = ft_isalpha('a');
 	printf("\n");
@@ -46,7 +46,7 @@ int	main(void)
 	printf("  My   function: %d\n", bb);
 	printf("\n");
 	//To test ft_isdigit
-	printf("------------------Testing ft_isdigit()------------------ \n");
+	printf("2-----------------Testing ft_isdigit()------------------ \n");
 	aa = isdigit('0');
 	bb = ft_isdigit('0');
 	printf("\n");
@@ -72,7 +72,7 @@ int	main(void)
 	printf("  My   function: %d\n", bb);
 	printf("\n");
 	//To test ft_isalnum
-	printf("------------------Testing ft_isalnum()------------------ \n");
+	printf("3-----------------Testing ft_isalnum()------------------ \n");
 	aa = isalnum('A');
 	bb = ft_isalnum('A');
 	printf("\n");
@@ -98,7 +98,7 @@ int	main(void)
 	printf("  My   function: %d\n", bb);
 	printf("\n");
 	//To test ft_isascii
-	printf("------------------Testing ft_isascii()------------------ \n");
+	printf("4-----------------Testing ft_isascii()------------------ \n");
 	aa = isascii('a');
 	bb = ft_isascii('a');
 	printf("\n");
@@ -124,7 +124,7 @@ int	main(void)
 	printf("  My   function: %d\n", bb);
 	printf("\n");
 	//To test ft_isprint
-	printf("------------------Testing ft_isprint()------------------ \n");
+	printf("5------------------Testing ft_isprint()------------------ \n");
 	aa = isprint('a');
 	bb = ft_isprint('a');
 	printf("\n");
@@ -150,7 +150,7 @@ int	main(void)
 	printf("  My   function: %d\n", bb);
 	printf("\n");
 	//To test ft_strlen
-	printf("------------------Testing ft_strlen()------------------ \n");
+	printf("6------------------Testing ft_strlen()------------------ \n");
 	aa = strlen("");
 	bb = ft_strlen("");
 	printf("\n");
@@ -189,16 +189,18 @@ int	main(void)
 	char *s = ft_strjoin(q, r);
 	printf("My   function: %s\n", s);
 	printf("------------------Testing ft_atoi()------------------ \n");
-	aa = atoi("-14554a5");
-	bb = ft_atoi("-14554a5");
-	printf("Actual function: %d\n", aa);
-	printf("  My   function: %d\n", bb);
+	printf("String: %s\n", "-14554z5");
+	printf("Number: %d\n", atoi("-14554z5"));
 	printf("\n");
-	aa = atoi("  +28554a5");
-	bb = ft_atoi("  +28554a5");
-	printf("Actual function: %d\n", aa);
-	printf("  My   function: %d\n", bb);
+	printf("String: %s\n", "  +28554a5");
+	printf("Number: %d\n", ft_atoi("  +28554a5"));
 	printf("\n");
-
+	printf("------------------Testing ft_itoa()------------------ \n");
+	printf("Number: %d\n", -145545);
+	printf("String: %s\n", ft_itoa(-145545));
+	printf("\n");
+	printf("Number: %d\n", 85545);
+	printf("String: %s\n", ft_itoa(85545));
+	printf("\n");
 	return (0);
 }

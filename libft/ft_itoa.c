@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 19:22:43 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/18 18:00:44 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/19 16:26:15 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_mag(int n)
 		n = n / 10;
 		i++;
 	}
-	return (i+s);
+	return (i + s);
 }
 
 int	ft_nvalue(int n)
@@ -43,6 +43,29 @@ int	ft_nvalue(int n)
 		return (-n);
 }
 
+void	ft_reverse(char *str)
+{
+	int		i;
+	int		len;
+	char	temp;
+	int		j;
+
+	i = 0;
+	j = 0;
+	len = ft_strlen(str);
+	if (str[0] == '-')
+		i = 1;
+	while (i < len / 2)
+	{
+		temp = str[i];
+		str[i] = str[len - 1 - j];
+		str[len - 1 - j] = temp;
+		i++;
+		j++;
+	}
+	str[len] = '\0';
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -50,78 +73,22 @@ char	*ft_itoa(int n)
 	int		nn;
 
 	nn = ft_nvalue(n);
-	str = (char *)malloc(ft_mag(n) + 1);
+	str = (char *)malloc(ft_mag(n) + 2);
 	i = 0;
 	if (!str)
-	{
 		return (NULL);
+	if (n < 0)
+	{
+		str[0] = '-';
 		i = 1;
 	}
-	if (n > 0)
-		str[0] = '-';
 	while (i < ft_mag(n))
 	{
-		str[ft_mag(n) - i - 1] = nn % 10 + '0';
+		str[i] = nn % 10 + '0';
 		nn = nn / 10;
 		i++;
 	}
-	str[i] = '\0';
+	ft_reverse(str);
 	return (str);
 }
 
-
-int	main(void)
-{
-	int a = -25;
-	char *s = ft_itoa(a);
-	printf("My function: %s\n", s);
-	return (0);
-}
-
-/*
-
-int	ft_mag(int n)
-{
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n > 0)
-	{
-		n = n / 10;
-		i++;
-	}
-	return (i);
-}
-
-
-char	*ft_itoa(int n)
-{
-	char	*str;
-	int		c;
-	int		i;
-
-	c = 1;
-	i = ft_mag(n);
-	if (n < 0)
-	{
-		c = -1;
-		n = -n;
-		str = (char *)malloc(i + 2);
-		str[0] = '-';
-	}
-	else
-		str = (char *)malloc(i + 1);
-	if (!str)
-		return (0);
-	while (i >= 0)
-	{
-		str[i - 1] = n % 10;
-		n = n / 10;
-		i--;
-	}
-	str[i]= '\0';
-	return (str);
-}
-*/

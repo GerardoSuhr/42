@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:42:27 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/17 18:53:16 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/19 16:05:44 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ char	ft_tolower(char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 int		ft_atoi(char *str);
+char	*ft_itoa(int n);
 
 #endif
