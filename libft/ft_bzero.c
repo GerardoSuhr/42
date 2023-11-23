@@ -1,47 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 17:23:39 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/23 15:49:15 by gsuhr            ###   ########.fr       */
+/*   Created: 2023/11/23 15:50:09 by gsuhr             #+#    #+#             */
+/*   Updated: 2023/11/23 16:01:19 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	findchar(char c, char *str, int l)
+void	bzero(char *s, size_t n)
 {
-	int	i;
-	int	r;
+	size_t	i;
 
 	i = 0;
-	r = 0;
-	while (i < l)
+	while (i < n)
 	{
-		if (str[i] == c)
-			r = 1;
+		s[i] = 0;
 		i++;
 	}
-	return (r);
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	char	*str;
-	int		i;
-	int		j;
-
-	str = (char *)malloc(ft_strlen(s1));
-	i = 0;
-	j = 0;
-	while (set[i])
-	{
-		if (findchar(set[i], s1, ft_strlen(set)) == 1)
-			j = 1;
-		i++;
-	}
-	return (str);
 }
