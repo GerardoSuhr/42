@@ -6,16 +6,16 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:53:52 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/14 11:56:29 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/27 15:38:23 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char a)
+int	ft_isprint(int c)
 {
 	int	r;
 
 	r = 0;
-	if ((a >= 32 && a <= 126))
+	if (((char)c >= 32 && (char)c <= 126))
 		r = 16384;
 	return (r);
 }

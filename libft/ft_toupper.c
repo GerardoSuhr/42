@@ -6,13 +6,13 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:34:55 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/15 13:37:13 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/27 16:14:26 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+char	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-	return (c);
+	if ((char)c >= 'a' && (char)c <= 'z')
+		(char)c = (char)c - 32;
+	return ((char)c);
 }

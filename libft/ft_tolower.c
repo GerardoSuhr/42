@@ -6,13 +6,13 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:42:33 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/15 13:42:50 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/27 16:14:06 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(char c)
+char	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c = c + 32;
-	return (c);
+	if ((char)c >= 'A' && (char)c <= 'Z')
+		(char)c = (char)c + 32;
+	return ((char)c);
 }

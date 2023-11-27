@@ -6,16 +6,16 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:46:12 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/17 16:16:52 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/27 15:38:00 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char a)
+int	ft_isascii(int c)
 {
 	int	r;
 
 	r = 0;
-	if ((a >= 0 && a <= 126))
+	if (((char)c >= 0 && (char)c <= 126))
 		r = 1;
 	return (r);
 }

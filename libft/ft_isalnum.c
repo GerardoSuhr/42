@@ -6,17 +6,18 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:34:01 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/14 11:35:44 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/11/27 15:37:06 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char a)
+int	ft_isalnum(int c)
 {
 	int	r;
 
 	r = 0;
-	if (((a >= 'A' && a <= 'Z') || (a >= 'a' && a <= 'z'))
-		|| (a >= '0' && a <= '9'))
+	if ((((char)c >= 'A' && (char)c <= 'Z')
+			|| ((char)c >= 'a' && (char)c <= 'z'))
+		|| ((char)c >= '0' && (char)c <= '9'))
 		r = 8;
 	return (r);
 }
