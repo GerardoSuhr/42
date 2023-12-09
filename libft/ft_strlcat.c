@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:01:30 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/09 17:02:01 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/09 17:24:58 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t c;
-	size_t d;
+	size_t	c;
+	size_t	d;
 
 	if (dstsize <= ft_strlen(dst))
 		return (dstsize + ft_strlen(src));

@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:45:30 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/05 17:46:09 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/09 17:34:48 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,21 +72,4 @@ char	**ft_split(char const *s, char c)
 	}
 	split[j] = 0;
 	return (split);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	char const *a = "adhhakjdhakdhjk";
-	char b = 'k';
-	int	i;
-	char	**splitted = ft_split(a, b);
-
-	i = 0;
-	while (splitted[i][0])
-	{
-		printf("%s\n", splitted[i]);
-		i++;
-	}
 }

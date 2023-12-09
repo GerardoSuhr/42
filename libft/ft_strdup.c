@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 17:00:25 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/09 17:00:37 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/09 17:36:56 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char *s2;
+	char	*s2;
 
-	if (!(s2 = (char *)malloc(ft_strlen(s1) + 1)))
+	s2 = (char *)malloc(ft_strlen(s1) + 1);
+	if (!s2)
 		return (0);
 	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
 	return (s2);

@@ -6,12 +6,11 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:23:12 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/19 16:57:10 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/09 17:17:58 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
