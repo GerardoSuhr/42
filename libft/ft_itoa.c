@@ -6,13 +6,13 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 19:22:43 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/09 17:24:21 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 15:39:27 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_mag(int n)
+static int	ft_mag(int n)
 {
 	int	i;
 	int	s;
@@ -34,7 +34,7 @@ int	ft_mag(int n)
 	return (i + s);
 }
 
-int	ft_nvalue(int n)
+static int	ft_nvalue(int n)
 {
 	if (n > 0)
 		return (n);
@@ -42,7 +42,7 @@ int	ft_nvalue(int n)
 		return (-n);
 }
 
-void	ft_reverse(char *str)
+static void	ft_reverse(char *str)
 {
 	int		i;
 	int		len;

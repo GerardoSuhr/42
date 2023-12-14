@@ -6,11 +6,9 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 17:13:13 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/09 17:21:01 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:55:06 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

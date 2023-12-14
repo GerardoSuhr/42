@@ -6,13 +6,15 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:34:55 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/27 16:14:26 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:47:33 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	ft_toupper(int c)
 {
-	if ((char)c >= 'a' && (char)c <= 'z')
-		(char)c = (char)c - 32;
-	return ((char)c);
+	if (c > 96 && c < 123)
+		return (c - 32);
+	return (c);
 }

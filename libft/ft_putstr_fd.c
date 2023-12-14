@@ -6,11 +6,10 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 17:58:52 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/09 17:59:06 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:25:23 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)

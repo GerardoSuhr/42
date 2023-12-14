@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:45:30 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/09 17:34:48 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:51:59 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*word_dup(const char *str, int start, int finish)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
+	int		i;
 	size_t	j;
 	int		index;
 	char	**split;

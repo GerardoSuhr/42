@@ -6,11 +6,11 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:50:51 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/15 12:53:12 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:36:24 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

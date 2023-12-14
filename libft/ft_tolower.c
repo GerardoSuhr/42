@@ -6,13 +6,15 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:42:33 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/27 16:14:06 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:47:06 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	ft_tolower(int c)
 {
-	if ((char)c >= 'A' && (char)c <= 'Z')
-		(char)c = (char)c + 32;
-	return ((char)c);
+	if (c > 64 && c < 91)
+		return (c + 32);
+	return (c);
 }

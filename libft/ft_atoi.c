@@ -6,11 +6,13 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:17:06 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/19 16:56:45 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:55:11 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+#include "libft.h"
+
+static int	ft_isspace(char c)
 {
 	int	r;
 
@@ -20,7 +22,7 @@ int	ft_isspace(char c)
 	return (r);
 }
 
-int	ft_sign(char c)
+static int	ft_sign(char c)
 {
 	int	r;
 

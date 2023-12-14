@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:41:54 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/11/19 17:05:07 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:31:47 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main(void)
 	printf("\n");
 	printf("Actual function: %d\n", aa);
 	printf("  My   function: %d\n", bb);
+}/*
 	printf("\n");
 	aa = isalpha('0');
 	bb = ft_isalpha('0');
@@ -204,3 +205,4 @@ int	main(void)
 	printf("\n");
 	return (0);
 }
+*/
