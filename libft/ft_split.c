@@ -6,70 +6,68 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:45:30 by gsuhr             #+#    #+#             */
-/*   Updated: 2023/12/14 18:51:59 by gsuhr            ###   ########.fr       */
+/*   Updated: 2023/12/20 16:27:11 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(const char *str, char c)
+static int	ft_word_count(const char *s, char c)
 {
+	int	word_count;
 	int	i;
-	int	trigger;
 
+	word_count = 0;
 	i = 0;
-	trigger = 0;
-	while (*str)
+	while (s[i])
 	{
-		if (*str != c && trigger == 0)
-		{
-			trigger = 1;
+		while (s[i] && s[i] == c)
 			i++;
+		if (s[i] != c && s[i])
+		{
+			word_count++;
+			while (s[i] && s[i] != c)
+				i++;
 		}
-		else if (*str == c)
-			trigger = 0;
-		str++;
 	}
-	return (i);
+	return (word_count);
 }
 
-static char	*word_dup(const char *str, int start, int finish)
+static void	ft_fill_space(char **to_fill, char const *original, char separator)
 {
-	char	*word;
-	int		i;
+	char		**tab1;
+	char const	*temp;
 
-	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
-	return (word);
+	temp = original;
+	tab1 = to_fill;
+	while (*temp)
+	{
+		while (*original == separator)
+			++original;
+		temp = original;
+		while (*temp && *temp != separator)
+			++temp;
+		if (*temp == separator || temp > original)
+		{
+			*tab1 = ft_substr(original, 0, temp - original);
+			original = temp;
+			++tab1;
+		}
+	}
+	*tab1 = NULL;
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	size_t	j;
-	int		index;
-	char	**split;
+	char	**result;
+	int		word_count;
 
-	split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s || !split)
-		return (0);
-	i = 0;
-	j = 0;
-	index = -1;
-	while (i <= ft_strlen(s))
-	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
-		{
-			split[j++] = word_dup(s, index, i);
-			index = -1;
-		}
-		i++;
-	}
-	split[j] = 0;
-	return (split);
+	if (!s)
+		return (NULL);
+	word_count = ft_word_count(s, c);
+	result = (char **)malloc(sizeof(char *) * (word_count +1));
+	if (result == NULL)
+		return (NULL);
+	ft_fill_space(result, s, c);
+	return (result);
 }
