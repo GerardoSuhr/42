@@ -1,2 +1,8 @@
+# .a files
+*.a
+
+# .o files
+*.o
+
 # .out files
 *.out
