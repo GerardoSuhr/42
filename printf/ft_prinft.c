@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 18:35:14 by gsuhr             #+#    #+#             */
-/*   Updated: 2024/01/13 15:30:54 by gsuhr            ###   ########.fr       */
+/*   Updated: 2024/01/13 17:40:48 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ size_t	ft_strlen(const char *str)
 
 int	var_counter(*char	str)
 {
-	int	i;
 	int	c;
+	size_t	i;
 
+	while i()
 
 }
 
