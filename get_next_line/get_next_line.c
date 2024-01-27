@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 16:12:03 by gsuhr             #+#    #+#             */
-/*   Updated: 2024/01/20 16:12:12 by gsuhr            ###   ########.fr       */
+/*   Created: 2024/01/20 16:02:03 by gsuhr             #+#    #+#             */
+/*   Updated: 2024/01/27 17:25:40 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static void		ft_free_null(char **ptr)
+static void	ft_free_null(char **ptr)
 {
 	if (!ptr || !*ptr)
 		return ;
@@ -20,7 +20,7 @@ static void		ft_free_null(char **ptr)
 	*ptr = NULL;
 }
 
-static void		ft_cpy_exc_buff(char **buff, long long j)
+static void	ft_cpy_exc_buff(char **buff, long long j)
 {
 	long long	i;
 	char		tmp[ARG_MAX];
@@ -38,7 +38,7 @@ static void		ft_cpy_exc_buff(char **buff, long long j)
 	}
 }
 
-static int		ft_buff2line(char **line, char **buff)
+static int	ft_buff2line(char **line, char **buff)
 {
 	long long	i;
 	long long	j;
@@ -65,13 +65,14 @@ static int		ft_buff2line(char **line, char **buff)
 	return (NO_ENDLINE);
 }
 
-int				get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char	*buff[OPEN_MAX];
 	char		tmp[ARG_MAX];
 	int			ret[2];
 
-	if (fd >= 0 && line && BUFFER_SIZE > 0 && (*line = ft_strdup("")))
+	*line = ft_strdup("");
+	if (fd >= 0 && line && BUFFER_SIZE > 0)
 	{
 		ret[0] = NO_ENDLINE;
 		while (ret[0] == NO_ENDLINE)

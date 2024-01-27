@@ -6,7 +6,7 @@
 /*   By: gsuhr <gsuhr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 16:15:49 by gsuhr             #+#    #+#             */
-/*   Updated: 2024/01/20 16:15:51 by gsuhr            ###   ########.fr       */
+/*   Updated: 2024/01/27 14:19:05 by gsuhr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t l;
+	size_t	l;
 
 	l = 0;
 	while (s[l] != 0)
@@ -29,7 +29,8 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 
 	size = ft_strlen(s1) + 1;
-	if (!(s2 = (char *)malloc(size)))
+	s2 = (char *)malloc(size);
+	if (!s2)
 		return (0);
 	i = 0;
 	while (i < size)
