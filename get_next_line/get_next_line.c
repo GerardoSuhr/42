@@ -76,10 +76,13 @@ int	get_next_line(int fd, char **line)
 	{
 		ret[0] = NO_ENDLINE;
 		while (ret[0] == NO_ENDLINE)
-		{
-			if (buff[fd] == NULL && (ret[1] = read(fd, tmp, BUFFER_SIZE)) >= 0
-				&& (tmp[ret[1]] = '\0') == 0)
+		{		
+			if (buff[fd] == NULL)
+			{	
+				ret[1] = read(fd, tmp, BUFFER_SIZE);
+				tmp[ret[1]] = '\0';
 				buff[fd] = ft_strdup(tmp);
+			}
 			if (buff[fd] != NULL)
 				ret[1] = ft_strlen(buff[fd]);
 			if (ret[1] < 0)
